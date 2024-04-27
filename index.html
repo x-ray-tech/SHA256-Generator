@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHA256 Hash Generator</title>
+    <script type="module" crossorigin src="./assets/index.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index.css">
+  </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BN47F1FJR0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BN47F1FJR0');
+</script>
+  
+  <body>
+    <div id="app">
+      <main class="main">
+	  		<div class="wrapper gap-6">
+          <h1 class="text-4xl font-bold">SHA256 Open Source Hash Generator</h1>
+        </div>
+		
+        <div class="wrapper gap-6">
+	
+			<p>Here you can find tools to calculate the hash of any file, text string, or multiple strings (a separate hash is generated for each string).</p>
+			<p>All calculations take place in your browser, so you can rest assured that your data remains with you and does not interact with our servers in any way.</p>
+			<p>This set of tools comes with completely open source (MIT License) and you can verify the safety of your data yourself, and also use this code as you wish.</p>
+			<p><a href="https://github.com/x-ray-tech/SHA256-Generator" target="_blank">Link to GitHub</a></p>
+
+		</div>
+		
+		<div class="wrapper gap-6">
+          <h1 class="text-4xl font-bold">From text string to SHA-256 hash sum</h1>
+        </div>		
+		
+		<div class="wrapper gap-6">
+			<p>Enter a text string for the hash sum you want to calculate.</p>
+        </div>
+		
+<div class="wrapper flex gap-6">
+          <section>	
+                <textarea
+                  id="text-hash-input"
+                  class="block h-auto w-auto border-none"
+                  placeholder=""
+                ></textarea>
+          </section>
+          <section class="ta-center">
+        <button
+            id="convert-btn-text"
+            disabled
+            type="button"
+            class="rounded-lg border border-primary-500 bg-primary-500 px-5 py-2.5 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary-700 focus:ring focus:ring-primary-200 disabled:cursor-not-allowed disabled:border-primary-300 disabled:bg-primary-300"
+          >
+            Calculate
+          </button>
+
+          </section>
+          <section>
+
+ 
+                <textarea
+                  id="text-hash-output"
+                  class="block h-auto w-auto border-none"
+                  placeholder=""
+                ></textarea>
+
+				
+          </section>
+  </div>		
+		
+		
+  <hr>
+  
+		<div class="header">
+        <div class="wrapper flex items-center gap-5 px-4 py-4">
+          <h1 class="text-4xl font-bold">SHA-256 hash of the file</h1>
+        </div>
+      </div>
+		
+		
+		<div class="wrapper gap-6">
+			<p>		Upload the file you want to calculate the hash sum.</p>
+        </div>
+		
+
+<div class="wrapper flex gap-6">
+          <section>	
+		<input type="file" id="file-input" />
+          </section>
+          <section class="ta-center">
+        <button
+            id="convert-btn-file"
+            disabled
+            type="button"
+            class="rounded-lg border border-primary-500 bg-primary-500 px-5 py-2.5 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary-700 focus:ring focus:ring-primary-200 disabled:cursor-not-allowed disabled:border-primary-300 disabled:bg-primary-300"
+          >
+            Calculate
+          </button>
+
+          </section>
+          <section>
+
+ 
+                <textarea
+                  id="file-hash-output"
+                  class="block h-auto w-auto border-none"
+                  placeholder=""
+                ></textarea>
+
+				
+          </section>
+  </div>		
+  <hr>
+
+		
+
+      <div class="header">
+        <div class="wrapper flex items-center gap-5 px-4 py-4">
+          <h1 class="text-4xl font-bold">From multiline text to SHA-256 hash sums</h1>
+          <button
+            id="clear-btn"
+            type="button"
+            class="ml-auto rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-center text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-100 focus:ring focus:ring-gray-100 disabled:cursor-not-allowed disabled:border-gray-100 disabled:bg-gray-50 disabled:text-gray-400"
+          >
+            Clear fields
+          </button>
+          <button
+            id="convert-btn"
+            disabled
+            type="button"
+            class="rounded-lg border border-primary-500 bg-primary-500 px-5 py-2.5 text-center text-sm font-medium text-white shadow-sm transition-all hover:border-primary-700 hover:bg-primary-700 focus:ring focus:ring-primary-200 disabled:cursor-not-allowed disabled:border-primary-300 disabled:bg-primary-300"
+          >
+            Hashing Text!
+          </button>
+        </div>
+      </div>
+		
+		
+		<div class="wrapper gap-6">
+			<p>Enter a text strings for the hash sums you want to calculate.</p>
+        </div>
+		
+        <div class="wrapper flex h-[calc(100vh-88px)] min-h-full gap-6">
+          <section>
+            <label
+              for="text-input"
+              class="mb-1 block text-sm font-medium text-gray-700"
+              >UTF-8 Text</label
+            >
+            <div data-editor class="editor-1">
+              <div data-editor-container>
+                <div data-line-numbers></div>
+                <textarea
+                  data-textarea
+                  id="text-input"
+                  class="block h-auto w-auto border-none"
+                  placeholder="Paste your text here"
+                ></textarea>
+              </div>
+              <div class="more-items-label"></div>
+            </div>
+            <button
+              type="button"
+              class="past-text-btn rounded-lg px-5 py-2.5 text-center text-sm font-medium text-gray-700 shadow-none transition-all"
+            >
+              Paste text
+            </button>
+            <div class="input-overlay"></div>
+          </section>
+          <section>
+            <label
+              for="hash-output"
+              class="mb-1 block text-sm font-medium text-gray-700"
+              >SHA256 Hash</label
+            >
+            <div data-editor class="editor-2">
+              <div data-editor-container>
+                <div data-line-numbers></div>
+                <textarea
+                  data-textarea
+                  id="hash-output"
+                  class="block h-auto w-auto border-none"
+                  placeholder=""
+                ></textarea>
+              </div>
+            </div>
+            <button data-textarea-copy type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentcolor"
+                class="h-5 w-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25.0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424.0 00-1.123-.08M15.75 18.75v-1.875A3.375 3.375.0 0012.375 13.5h-1.5A1.125 1.125.0 019.75 12.375v-1.5A3.375 3.375.0 006.375 7.5H5.25m11.9-3.664A2.251 2.251.0 0015 2.25h-1.5a2.251 2.251.0 00-2.15 1.586m5.8.0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621.0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621.0 1.125-.504 1.125-1.125V16.5a9 9 0 00-9-9z"
+                ></path>
+              </svg>
+            </button>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
